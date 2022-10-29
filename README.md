@@ -37,3 +37,20 @@ For generating custom 2D-grid by yourself, you need to set the following paramet
 - `end_x, end_y` - coordinates of starting point
 - `n` - dimension of map
 - `obstacles_density` - how many obstacles will be on the map (from 0.0 to 1.0)
+
+## Path format
+If optimal path was found, it's stored in a file `path.txt` with following structure:
+
+```
+x_1 y_1
+x_2 y_2
+
+...
+
+x_k y_k
+```
+
+- `x_i, y_i` - coordinates of optimal path's points
+
+## Setup and run
+If you want to play with this...
