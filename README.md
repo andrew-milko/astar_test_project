@@ -31,10 +31,10 @@ x_k y_k
 - `start_x, end_x` - coordinates of starting point
 - `end_x, end_y` - coordinates of starting point
 - `n` - dimension of map
-- `x_i, y_i` - coordinats of obstacle points
+- `x_i, y_i` - coordinates of obstacle points
 
 ## Map generation
-For generating custom 2D-grid by yourself, you need to set the following parameters:
+For generating custom 2D-grid by yourself (creating `map.txt` file), you need to set the following parameters:
 - `start_x, end_x` - coordinates of starting point
 - `end_x, end_y` - coordinates of ending point
 - `n` - dimension of map
