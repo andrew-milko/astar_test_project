@@ -1,0 +1,2 @@
+Launches: 18
+Mean time: 4.80156 seconds

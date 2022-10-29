@@ -1,6 +1,9 @@
 #include <iostream>
 #include <fstream>
 #include <vector>
+#include <thread>
+#include <chrono>
+#include <time.h> 
 #include <cmath>
 #include <set>
 
@@ -77,15 +80,27 @@ void initialize_nodes(int n, vector<vector<int>>& obstacles , vector<vector<Node
     }
 }
 
-void generate_map(vector<vector<int>> &obstacles, int n, int start_x, int start_y, int end_x, int end_y, float obstacles_density) {
+void generate_map(
+    vector<vector<int>> &obstacles,
+    int n,
+    int start_x,
+    int start_y,
+    int end_x,
+    int end_y,
+    float obstacles_density,
+    bool check_perfomance
+    ) {
     obstacles = vector<vector<int>>(n, vector<int>(n, 0));
 
     ofstream out;         
-    out.open("map.txt");
-
-    out << start_x << " " << start_y << "\n";
-    out << end_x << " " << end_y << "\n";
-    out << n << "\n"; 
+    
+    if (!check_perfomance) {
+        out.open("map.txt");
+        out << start_x << " " << start_y << "\n";
+        out << end_x << " " << end_y << "\n";
+        out << n << "\n"; 
+    }
+    
 
     for (int i = 0; i < n; i++) {
         for (int j = 0; j < n; j++) {
@@ -97,7 +112,9 @@ void generate_map(vector<vector<int>> &obstacles, int n, int start_x, int start_
                     // do nothing
                 } else {
                     obstacles[i][j] = 1;
-                    out << i << " " << j << "\n";
+                    if (!check_perfomance) {
+                        out << i << " " << j << "\n";
+                    }
                 }
             }
         }
@@ -127,7 +144,18 @@ void upload_path(const vector<pair<int, int>>& path_coords) {
 }
 
 
-void find_path(vector<pair<int, int>>& path_coordinates, bool read_map=true, int n=100, int start_x=0, int start_y=0, int end_x=0, int end_y=0, float obstacles_density=0.3) {
+void find_path(
+    vector<pair<int, int>>& path_coordinates,
+    bool read_map=true,
+    int n=100,
+    int start_x=0,
+    int start_y=0,
+    int end_x=0,
+    int end_y=0,
+    float obstacles_density=0.3,
+    bool check_perfomance=false
+    ) {
+
     vector<vector<Node>> nodes;
     vector<vector<int>> obstacles;
 
@@ -153,7 +181,7 @@ void find_path(vector<pair<int, int>>& path_coordinates, bool read_map=true, int
         myfile.close();
         
     } else {
-        generate_map(obstacles, n, start_x, start_y, end_x, end_y, obstacles_density);
+        generate_map(obstacles, n, start_x, start_y, end_x, end_y, obstacles_density, check_perfomance);
     }
 
     // Initialization
@@ -180,8 +208,10 @@ void find_path(vector<pair<int, int>>& path_coordinates, bool read_map=true, int
         Node& current_node = *(open_set_vector[lowest_index]);
 
         if ((current_node.x == end_node.x) && (current_node.y == end_node.y)) {
-            generate_path(path_coordinates, current_node);
-            upload_path(path_coordinates);
+            if (!check_perfomance) {
+                generate_path(path_coordinates, current_node);
+                upload_path(path_coordinates);
+            }
             break;
         }
 
@@ -219,19 +249,50 @@ void find_path(vector<pair<int, int>>& path_coordinates, bool read_map=true, int
 }
 
 int main() {
-    bool read_map = true;
+    bool check_perfomance = true;
     vector<pair<int, int>> path_coordinates;
-    
-    if (read_map) {
-        find_path(path_coordinates, true);
+
+    if (!check_perfomance) {
+        bool read_map = true;
+        
+        if (read_map) {
+            find_path(path_coordinates, true);
+        } else {
+            find_path(path_coordinates, false, 1000, 200, 100, 700, 900, 0.35);
+        }
+        
+        if (path_coordinates.size() > 0) {
+            cout << "Optimal path was found and saved to 'path.txt' file.\n";
+        } else {
+            cout << "Optimal path doesn't exist for current problem statement.\n";
+        }
     } else {
-        find_path(path_coordinates, false, 1000, 200, 100, 700, 900, 0.35);
-    }
-    
-    if (path_coordinates.size() > 0) {
-        cout << "Optimal path was found and saved to 'path.txt' file.\n";
-    } else {
-        cout << "Optimal path doesn't exist for current problem statement.\n";
+        // Make several launches with different 'n' and 'obstacles_density'
+        // Measure the average time of finding the path
+        // Logs will be recorded in 'perfomance_log.txt'
+
+        ofstream log;         
+        log.open("perfomance_log.txt");
+
+        float mean_time = 0.0;
+
+        vector<int> n_arr {50, 200, 400, 600, 800, 1000};
+        vector<float> obstacles_density_arr {0.2, 0.4, 0.6};
+        int launches = n_arr.size() * obstacles_density_arr.size();
+
+        log << "Launches: " << launches << "\n";
+
+        for (int i = 0; i < n_arr.size(); i++){
+            for (int j = 0; j < obstacles_density_arr.size(); j++) {
+                clock_t start = clock();
+                find_path(path_coordinates, false, n_arr[i], 0, 0, n_arr[i] - 1, n_arr[i] - 1, obstacles_density_arr[j], check_perfomance);
+                clock_t end = clock();
+                mean_time += ((float)(end - start) / CLOCKS_PER_SEC);
+            }
+        }
+        
+        log << "Mean time: " << (mean_time / launches) << " seconds\n";
+        log.close();
     }
 
     return 0;
