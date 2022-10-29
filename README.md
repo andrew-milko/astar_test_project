@@ -2,6 +2,8 @@
 
 In this repository you can find C++ implementation of `A* search algorithm`.
 
+![My Image](foxglove_readme_ex.jpg)
+
 ## Problem statement
 - map is a 2D-grid which consists of `n x n` cells
 - white cells are `free`, black cells are `obstacles` (you can't build paths through them)
