@@ -36,7 +36,7 @@ x_k y_k
 ## Map generation
 For generating custom 2D-grid by yourself, you need to set the following parameters:
 - `start_x, end_x` - coordinates of starting point
-- `end_x, end_y` - coordinates of starting point
+- `end_x, end_y` - coordinates of ending point
 - `n` - dimension of map
 - `obstacles_density` - how many obstacles will be on the map (from 0.0 to 1.0)
 
