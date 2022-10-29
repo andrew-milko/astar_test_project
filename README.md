@@ -2,7 +2,7 @@
 
 In this repository you can find C++ implementation of `A* search algorithm`.
 
-![My Image](foxglove_readme_ex.jpg)
+![My Image](readme_files/foxglove_readme_ex.jpg)
 
 ## Problem statement
 - map is a 2D-grid which consists of `n x n` cells
