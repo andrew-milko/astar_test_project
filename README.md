@@ -54,5 +54,9 @@ x_k y_k
 
 - `x_i, y_i` - coordinates of optimal path's points
 
+## Perfomance
+...
+
 ## Setup and run
-If you want to play with this...
+...
+
