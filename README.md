@@ -55,7 +55,7 @@ x_k y_k
 - `x_i, y_i` - coordinates of optimal path's points
 
 ## Perfomance
-...
+In my opinion, the code `astar.cpp` is written optimally (as far as my knowledge allows). I tried not to make unnecessary copies of data, but to use links and poinetrs. I think the code can be accelerated if you experiment with different data types. I made some tests to find out the average time of finding the optimal path `(~4.8 sec.)` depending on different `n` and `obstacles_density` values. Results are stored in `perfomance_log.txt` file  
 
 ## Setup and run
 ...
