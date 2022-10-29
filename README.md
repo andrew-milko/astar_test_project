@@ -52,11 +52,11 @@ x_k y_k
 
 ## Two approaches for visualization
 - `2d_picture.png`: image of 2D-grid with obstacles and optimal path ([Google Colab Notebook](https://colab.research.google.com/drive/1ivw2n-Ior9ehzbsOHj1cHsbU3BGrJef_?usp=sharing))
-- `foxglove_topic.bag`: special file format for [Foxglove Studio](https://foxglove.dev/) to recreate found optimal path in 3D environment
+- `3d_foxglove.db3`: special file format for [Foxglove Studio](https://foxglove.dev/) to recreate found optimal path in 3D environment
 
 ## Perfomance
 In my opinion, the code `astar.cpp` is written optimally (as far as my knowledge allows). I tried not to make unnecessary copies of data, but to use links and poinetrs. I think the code can be accelerated if you experiment with different data types. I made some tests to find out the average time of finding the optimal path `(~4.8 sec.)` depending on different `n` and `obstacles_density` values. Results are stored in `perfomance_log.txt` file.
 
-## Setup and run
-...
-
+## Prerequisites
+- `Ubuntu 20.04`
+- `ROS 2 Galactic`
