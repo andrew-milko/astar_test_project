@@ -28,7 +28,7 @@ x_2 y_2
 x_k y_k
 ```
 
-- `start_x, end_x` - coordinates of starting point
+- `start_x, start_y` - coordinates of starting point
 - `end_x, end_y` - coordinates of starting point
 - `n` - dimension of map
 - `x_i, y_i` - coordinates of obstacle points
