@@ -1,0 +1,26 @@
+[0.016s] Invoking command in '/home/andrew/Desktop/truck_project/build/astar_package': CMAKE_PREFIX_PATH=/opt/ros/galactic /usr/bin/cmake --build /home/andrew/Desktop/truck_project/build/astar_package -- -j8 -l8
+[0.067s] [35m[1mScanning dependencies of target draw_marker[0m
+[0.103s] [ 50%] [32mBuilding CXX object CMakeFiles/draw_marker.dir/src/script.cpp.o[0m
+[4.140s] [100%] [32m[1mLinking CXX executable draw_marker[0m
+[4.367s] [100%] Built target draw_marker
+[4.400s] Invoked command in '/home/andrew/Desktop/truck_project/build/astar_package' returned '0': CMAKE_PREFIX_PATH=/opt/ros/galactic /usr/bin/cmake --build /home/andrew/Desktop/truck_project/build/astar_package -- -j8 -l8
+[4.452s] Invoking command in '/home/andrew/Desktop/truck_project/build/astar_package': CMAKE_PREFIX_PATH=/opt/ros/galactic /usr/bin/cmake --install /home/andrew/Desktop/truck_project/build/astar_package
+[4.461s] -- Install configuration: ""
+[4.461s] -- Installing: /home/andrew/Desktop/truck_project/install/astar_package/lib/astar_package/draw_marker
+[4.463s] -- Set runtime path of "/home/andrew/Desktop/truck_project/install/astar_package/lib/astar_package/draw_marker" to ""
+[4.463s] -- Up-to-date: /home/andrew/Desktop/truck_project/install/astar_package/share/ament_index/resource_index/package_run_dependencies/astar_package
+[4.464s] -- Up-to-date: /home/andrew/Desktop/truck_project/install/astar_package/share/ament_index/resource_index/parent_prefix_path/astar_package
+[4.464s] -- Up-to-date: /home/andrew/Desktop/truck_project/install/astar_package/share/astar_package/environment/ament_prefix_path.sh
+[4.464s] -- Up-to-date: /home/andrew/Desktop/truck_project/install/astar_package/share/astar_package/environment/ament_prefix_path.dsv
+[4.464s] -- Up-to-date: /home/andrew/Desktop/truck_project/install/astar_package/share/astar_package/environment/path.sh
+[4.464s] -- Up-to-date: /home/andrew/Desktop/truck_project/install/astar_package/share/astar_package/environment/path.dsv
+[4.464s] -- Up-to-date: /home/andrew/Desktop/truck_project/install/astar_package/share/astar_package/local_setup.bash
+[4.464s] -- Up-to-date: /home/andrew/Desktop/truck_project/install/astar_package/share/astar_package/local_setup.sh
+[4.465s] -- Up-to-date: /home/andrew/Desktop/truck_project/install/astar_package/share/astar_package/local_setup.zsh
+[4.465s] -- Up-to-date: /home/andrew/Desktop/truck_project/install/astar_package/share/astar_package/local_setup.dsv
+[4.465s] -- Installing: /home/andrew/Desktop/truck_project/install/astar_package/share/astar_package/package.dsv
+[4.465s] -- Up-to-date: /home/andrew/Desktop/truck_project/install/astar_package/share/ament_index/resource_index/packages/astar_package
+[4.465s] -- Up-to-date: /home/andrew/Desktop/truck_project/install/astar_package/share/astar_package/cmake/astar_packageConfig.cmake
+[4.466s] -- Up-to-date: /home/andrew/Desktop/truck_project/install/astar_package/share/astar_package/cmake/astar_packageConfig-version.cmake
+[4.466s] -- Up-to-date: /home/andrew/Desktop/truck_project/install/astar_package/share/astar_package/package.xml
+[4.467s] Invoked command in '/home/andrew/Desktop/truck_project/build/astar_package' returned '0': CMAKE_PREFIX_PATH=/opt/ros/galactic /usr/bin/cmake --install /home/andrew/Desktop/truck_project/build/astar_package

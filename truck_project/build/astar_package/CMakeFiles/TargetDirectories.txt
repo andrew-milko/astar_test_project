@@ -1,0 +1,10 @@
+/home/andrew/Desktop/truck_project/build/astar_package/CMakeFiles/install/strip.dir
+/home/andrew/Desktop/truck_project/build/astar_package/CMakeFiles/install.dir
+/home/andrew/Desktop/truck_project/build/astar_package/CMakeFiles/list_install_components.dir
+/home/andrew/Desktop/truck_project/build/astar_package/CMakeFiles/rebuild_cache.dir
+/home/andrew/Desktop/truck_project/build/astar_package/CMakeFiles/edit_cache.dir
+/home/andrew/Desktop/truck_project/build/astar_package/CMakeFiles/test.dir
+/home/andrew/Desktop/truck_project/build/astar_package/CMakeFiles/draw_marker.dir
+/home/andrew/Desktop/truck_project/build/astar_package/CMakeFiles/install/local.dir
+/home/andrew/Desktop/truck_project/build/astar_package/CMakeFiles/astar_package_uninstall.dir
+/home/andrew/Desktop/truck_project/build/astar_package/CMakeFiles/uninstall.dir
