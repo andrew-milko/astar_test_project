@@ -38,7 +38,7 @@ For generating custom 2D-grid by yourself (creating `map.txt` file), you need to
 - `start_x, end_x` - coordinates of starting point
 - `end_x, end_y` - coordinates of ending point
 - `n` - dimension of map
-- `obstacles_density` - how many obstacles will be on the map (from 0.0 to 1.0)
+- `obstacles_density` - how many obstacles will be on the map *(from 0.0 to 1.0)*
 
 ## Path format
 If optimal path was found, it's stored in a file `path.txt` with following structure:
