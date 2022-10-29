@@ -12,7 +12,7 @@ In this repository you can find C++ implementation of `A* search algorithm`.
 - `foxglove_topic.bag`: special file format for [Foxglove Studio](https://foxglove.dev/) to recreate optimal path in 3D environment
 
 ## Map format
-Map is stored in a file `map.txt`, for ex.:
+Map is stored in a file `map.txt` with following structure:
 
 ```
 start_x end_x
