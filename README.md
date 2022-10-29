@@ -5,10 +5,10 @@ In this repository you can find C++ implementation of `A* search algorithm`.
 ## Problem statement
 - 2D-map consists of `n x n` cells
 - white cells are `free`, black cells are `obstacles` (you can't build paths through them)
-- blue cells refer to the found optimal path
+- blue cells refer to the optimal path
 
 ## Two approaches for visualization
-- `2d_picture.png`: image with 2D-grid of obstacles (black cells) and optimal path (blue cells)
+- `2d_picture.png`: image with 2D-grid of obstacles and optimal path
 - `foxglove_topic.bag`: special file format for Foxglove Studio to recreate optimal path in 3D environment
 
 ## Map format
