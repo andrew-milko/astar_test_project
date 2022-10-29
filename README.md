@@ -9,10 +9,6 @@ In this repository you can find C++ implementation of `A* search algorithm`.
 - white cells are `free`, black cells are `obstacles` (you can't build paths through them)
 - blue cells refer to the optimal path
 
-## Two approaches for visualization
-- `2d_picture.png`: image of 2D-grid with obstacles and optimal path
-- `foxglove_topic.bag`: special file format for [Foxglove Studio](https://foxglove.dev/) to recreate found optimal path in 3D environment
-
 ## Map format
 Data about 2D-grid is stored in a file `map.txt` with following structure:
 
@@ -53,6 +49,10 @@ x_k y_k
 ```
 
 - `x_i, y_i` - coordinates of optimal path's points
+
+## Two approaches for visualization
+- `2d_picture.png`: image of 2D-grid with obstacles and optimal path ([Google Colab Notebook](https://colab.research.google.com/drive/1ivw2n-Ior9ehzbsOHj1cHsbU3BGrJef_?usp=sharing))
+- `foxglove_topic.bag`: special file format for [Foxglove Studio](https://foxglove.dev/) to recreate found optimal path in 3D environment
 
 ## Perfomance
 In my opinion, the code `astar.cpp` is written optimally (as far as my knowledge allows). I tried not to make unnecessary copies of data, but to use links and poinetrs. I think the code can be accelerated if you experiment with different data types. I made some tests to find out the average time of finding the optimal path `(~4.8 sec.)` depending on different `n` and `obstacles_density` values. Results are stored in `perfomance_log.txt` file.
